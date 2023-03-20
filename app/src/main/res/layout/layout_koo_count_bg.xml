@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="12dp"
+    android:paddingHorizontal="5dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/koo_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:minLines="1"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@color/appColorTextCaption"
+        android:textSize="9sp"
+        tools:text="+223 koos" />
+
+
+</RelativeLayout>
+

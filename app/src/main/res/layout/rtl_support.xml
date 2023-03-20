@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="12dp">
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_JustificationIcon"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:layout_toStartOf="@+id/justification_text"
+            android:visibility="visible"
+            app:tint="@color/appColorSecondaryIconNormalTint"
+            tools:src="@drawable/ic_profile_placeholder" />
+
+        <RelativeLayout
+            android:id="@+id/channelView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_below="@+id/justification_text"
+            android:layout_marginStart="8dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/channel_imageview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_profile_placeholder"/>
+
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/profile_badge"
+            layout="@layout/layout_koo_count_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginTop="46dp"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/justification_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@id/channelView"
+            android:maxLines="1"
+            android:textColor="@color/appColorTextCaption"
+            android:textSize="12sp"
+            android:visibility="visible"
+            tools:text="He is your friend"
+            android:text="He is your friend"/>
+
+        <LinearLayout
+            android:id="@id/name_score_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/justification_text"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_toStartOf="@+id/fl_follow_layout"
+            android:layout_toEndOf="@id/channelView"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/channel_name_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingEnd="20dp"
+                android:paddingStart="0dp"
+                android:singleLine="true"
+                android:textColor="@color/appColorTextPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Vikas Suthar"
+                tools:text="text text text text text texttext"
+                android:textAlignment="viewStart"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgBadge"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="-16dp"
+                android:layout_marginEnd="2dp"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_badge_grey" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:singleLine="true"
+                android:layout_marginBottom="1dp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/appColorTextCaption"
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:text="Software enginerr Vishala"
+                tools:text="jslkfjdsdflsjflksjflksjflksjflksflksjflks" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_follow_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/name_score_layout"
+            android:layout_alignParentEnd="true">
+
+
+
+
+        </FrameLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/channel_follower_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_score_layout"
+            android:layout_alignStart="@+id/name_score_layout"
+            android:layout_toStartOf="@+id/fl_follow_layout"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:textAlignment="viewStart"
+            android:textColor="@color/appColorTextPrimary"
+            android:textSize="14sp"
+            android:visibility="visible"
+            tools:text="Hello, I only exist on kuhu."
+            android:text="Hello, I only exist on kuhu."/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/channel_description_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/channel_follower_textview"
+            android:layout_alignStart="@+id/name_score_layout"
+            android:paddingEnd="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textAlignment="viewStart"
+            android:textColor="@color/appColorTextPrimary"
+            android:textSize="14sp"
+            android:visibility="visible"
+            tools:text="Hello, I only exist on kuhu."
+            android:text="Hello, I only exist on kuhu."/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/follows_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/channel_description_textview"
+            android:layout_alignStart="@id/channel_follower_textview"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/OKDarkGrey"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:text="Follows x people" />
+
+        <RelativeLayout
+            android:id="@+id/following_images_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@id/follows_tv"
+            android:layout_alignStart="@id/follows_tv"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
+
+
+        <View
+            android:id="@+id/divider_with_welcome_button"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+
+            android:layout_marginTop="12dp"
+            android:background="@color/appColorCardBorder"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/appColorCardBorder"
+        app:layout_constraintTop_toBottomOf="@id/container"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
